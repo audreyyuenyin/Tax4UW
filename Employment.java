@@ -1,17 +1,16 @@
 public class Employment {
-	double employmentIncome;
-	double salary;
-	double commission;
-	double bonus;
-	double benefitTotalAmt;
-	int benefits;
-	double expenseTotalAmt;
-	int expenses;
+	double employmentIncome = 0;
+	double salary = 0;
+	double commission = 0;
+	double bonus = 0;
+	double benefitTotalAmt = 0;
+	int benefits = 0;
+	double expenseTotalAmt = 0;
+	int expenses = 0;
 
-	public void AddSalary(double salary)	{
+	public void AddSal(double salary)	{
 		this.salary = salary;
 		this.employmentIncome += salary;
-		System.out.println("Your employment income is currently $" + employmentIncome);
 	}
 
 	public void AddCom(double commission)	{
@@ -27,7 +26,7 @@ public class Employment {
 	}
 
 	public void Benefits(double taxableAmt)	{
-		this.benefitTotalAmt += this.taxableAmt;
+		this.benefitTotalAmt += taxableAmt;
 		this.benefits++; 
 		this.employmentIncome += taxableAmt;
 		System.out.println("Your employment income is currently $" + employmentIncome);	
